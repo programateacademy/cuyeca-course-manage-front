@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Card from "./components/card";
+import Cards from './components/cards'
+
 
 const App = () => {
   const [message, setMessage] = useState("");
