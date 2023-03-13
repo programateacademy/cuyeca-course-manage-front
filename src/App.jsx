@@ -27,6 +27,7 @@ const App = () => {
 
   return (
     <div>
+      {message}
       <Card/>
     </div>
   );
