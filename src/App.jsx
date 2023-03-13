@@ -28,7 +28,8 @@ const App = () => {
 
   return (
     <div>
-      <Cards/>
+      {message}
+      <Card/>
     </div>
   );
 };
