@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Cards from './components/cards'
+import Card from "./components/card";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+import Header from "./components/header";
 
 
 const App = () => {
@@ -28,10 +30,21 @@ const App = () => {
 
   return (
     <div>
-      {message}
-      <Cards/>
+      <Router>
+        <Header/>
+        <Routes>
+          <Route path='/' element={<Card/>}>  </Route>
+          <Route path='/admin' element={<footer/>}>  </Route>
+          <Route path='/foro' element={<cards/>}>  </Route>
+        </Routes>
+      </Router>
+
+      
     </div>
   );
 };
+
+
+
 
 export default App;
