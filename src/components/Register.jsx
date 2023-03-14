@@ -1,4 +1,5 @@
 import React,{useContext, useState} from "react";
+import Logoc from "../assets/Logoc.svg";
 import { SuperAdminContext } from "../context/SuperAdminContext";
 
 const Register = () => {
@@ -14,6 +15,7 @@ const Register = () => {
             <div className="container main">
                 <div className="row">
                     <div className="col-md-6 side-image"></div>
+                    <img src={Logoc} alt="Logo" />
                     <div className="text">
                         <p>Por los derechos de los niños y las niñas</p>
                     </div>
@@ -24,3 +26,5 @@ const Register = () => {
         </div>
     )
 };
+
+export default Register;
