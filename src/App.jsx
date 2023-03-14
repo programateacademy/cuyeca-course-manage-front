@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Card from "./components/card";
+import Cards from "./components/cards"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import Header from "./components/header";
+import Register from "./components/Register";
 
 
 const App = () => {
@@ -32,10 +34,11 @@ const App = () => {
     <div>
       <Router>
         <Header/>
+
         <Routes>
-          <Route path='/' element={<Card/>}>  </Route>
-          <Route path='/admin' element={<footer/>}>  </Route>
-          <Route path='/foro' element={<cards/>}>  </Route>
+          <Route path='/' element={<Cards/>}>  </Route>
+          <Route path='/admin' element={<Register/>}>  </Route>
+          <Route path='/foro' element={""}>  </Route>
         </Routes>
       </Router>
 
