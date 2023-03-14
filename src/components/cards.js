@@ -9,7 +9,8 @@ const cards = [
     {
         id: 1,
         title: "Leccion 1",
-        image: img1
+        image: img1,
+        text: 'Esta es la primera lección, trata de:'
     },
     {
         id: 2,
@@ -31,7 +32,7 @@ function Cards() {
             {
                 cards.map(card => (
                     <div className="col-md-4" key={card.id}>
-                        <Card title={card.title} imageSource={card.image}/>
+                        <Card title={card.title} imageSource={card.image} text={card.text}/>
                     </div>
                 ))
             }
