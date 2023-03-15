@@ -44,6 +44,8 @@ const App = () => {
           <Route path='/admin' element={<Login/>}>  </Route>
           <Route path='/foro' element={""}>  </Route>
         </Routes>
+
+        <Footer/>
       </Router>
 
       
