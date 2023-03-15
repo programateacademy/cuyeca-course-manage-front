@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Cards from './components/cards'
+import Footer from "./components/footer";
 
 
 const App = () => {
@@ -30,6 +31,7 @@ const App = () => {
     <div>
       {message}
       <Cards/>
+      <Footer/>
     </div>
   );
 };
