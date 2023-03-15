@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from "react";
-import Cards from './components/cards'
 import Footer from "./components/footer";
+import Card from "./components/card";
+import Cards from "./components/cards"
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+import Header from "./components/header";
+import Register from "./components/Register";
+import Login from "./components/Login";
+
 
 
 const App = () => {
@@ -29,11 +35,23 @@ const App = () => {
 
   return (
     <div>
-      {message}
-      <Cards/>
-      <Footer/>
+
+      <Router>
+        <Header/>
+
+        <Routes>
+          <Route path='/' element={<Cards/>}>  </Route>
+          <Route path='/admin' element={<Login/>}>  </Route>
+          <Route path='/foro' element={""}>  </Route>
+        </Routes>
+      </Router>
+
+      
     </div>
   );
 };
+
+
+
 
 export default App;

@@ -1,0 +1,36 @@
+.card:hover {
+    box-shadow: 5px 10px 20px 1px rgba(236, 208, 111, 1) !important;
+    transition: all 0.7s linear;
+}
+
+.card-body {
+    padding: 2rem 0 !important;
+}
+
+.card-text{
+    padding: 1rem 1rem;
+}
+
+.overflow{
+    overflow: hidden;
+}
+
+.card-text1{
+    padding: 0 1rem;
+}
+
+.card-text1:hover{
+    background: linear-gradient(190deg, rgba(255,255,255,1) 0%, rgba(236,208,111,1) 52%, rgba(255,145,38,1) 100%);
+    transition: all 0.2s linear;
+    padding: 1rem 1rem;
+}
+
+.card-img{
+    transition: all 0.2s ease-in-out;
+    height: 10rem;
+    width: 10rem;
+}
+
+.card-img:hover{
+    transform: scale(1.1);
+}
