@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
+import Footer from "./components/footer";
 import Card from "./components/card";
 import Cards from "./components/cards"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import Header from "./components/header";
 import Register from "./components/Register";
 import Login from "./components/Login";
+
 
 
 const App = () => {
@@ -33,6 +35,7 @@ const App = () => {
 
   return (
     <div>
+
       <Router>
         <Header/>
 
