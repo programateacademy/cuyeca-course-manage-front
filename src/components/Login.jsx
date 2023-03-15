@@ -14,10 +14,10 @@ const Login =() => {
             <div className="container main">
                 <div className="row">
                     <div className="col-md-6 side-image">
-                    <img src={Logoc} className="imageLogo" alt="Logo" />
-                    <div className="text">
-                        <p>Por los derechos de los niños y las niñas</p>
-                    </div>
+                        <img src={Logoc} className="imageLogo" alt="Logo" />
+                        <div className="text">
+                            <p>Por los derechos de los niños y las niñas</p>
+                        </div>
                     </div>
                 </div>
                 <div className="col-md-6 right">
@@ -26,8 +26,7 @@ const Login =() => {
                             Iniciar Sesion
                         </header>
                         <div class ="input-field">
-                            <input type="email" 
-                            placeholder="ingrese su correo" 
+                            <input type="email"
                             value={email} 
                                     onChange={(e) => setEmail(e.target.value)}
                                     className="input"
@@ -37,7 +36,6 @@ const Login =() => {
                         </div>
                         <div class ="input-field">
                             <input type="password" 
-                            placeholder="ingrese su contraseña" 
                             value={password} 
                                     onChange={(e) => setPassword(e.target.value)}
                                     className="input"
