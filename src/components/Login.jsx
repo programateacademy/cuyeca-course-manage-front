@@ -12,7 +12,7 @@ const Login =() => {
     return (
         <div className="wrapper">
             <div className="container main">
-                <div className="row">
+                <div className="row" id="container-row">
                     <div className="col-md-6 side-image">
                         <img src={Logoc} className="imageLogo" alt="Logo" />
                         <div className="text">

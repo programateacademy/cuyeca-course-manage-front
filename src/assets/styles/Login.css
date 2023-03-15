@@ -17,11 +17,10 @@
     border-bottom-right-radius: 15px;
 }
 
-.row{
+#container-row{
     width: 900px;
     height: 550px;
     border-radius: 10px;
-    background: #ececec;
 }
 .side-image{
     background-image: url("../img/imageLogin.jpg");
