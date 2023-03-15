@@ -21,7 +21,16 @@ const Register = () => {
                     </div>
                   
                 </div>
-                <div className="col-md-6 right"></div>
+                <div className="col-md-6 right">
+                    <div className="input-box">
+                        <header>
+                            Crear cuenta de superadministrador
+                        </header>
+                        <div class ="input-field">
+                            
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )
