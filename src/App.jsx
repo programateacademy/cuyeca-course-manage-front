@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import Header from "./components/header";
 import Register from "./components/Register";
 import Login from "./components/Login";
+import Lesson from "./components/lesson"
 
 
 
@@ -43,6 +44,7 @@ const App = () => {
           <Route path='/' element={<Cards/>}>  </Route>
           <Route path='/admin' element={<Login/>}>  </Route>
           <Route path='/foro' element={""}>  </Route>
+          <Route path='/lesson' element={<Lesson/>}> </Route>
         </Routes>
 
         <Footer/>
