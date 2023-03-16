@@ -4,9 +4,8 @@ import Card from "./components/card";
 import Cards from "./components/cards"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import Header from "./components/header";
-import Register from "./components/Register";
 import Login from "./components/Login";
-
+import SuperAdmin from "./components/SuperAdmin";
 
 
 const App = () => {
@@ -38,10 +37,9 @@ const App = () => {
 
       <Router>
         <Header/>
-
         <Routes>
           <Route path='/' element={<Cards/>}>  </Route>
-          <Route path='/admin' element={<Login/>}>  </Route>
+          <Route path='/admin' element={<SuperAdmin/>}>  </Route>
           <Route path='/foro' element={""}>  </Route>
         </Routes>
 
