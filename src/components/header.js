@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Logoc from "../assets/Logoc.svg";
-import App from '../App.css';
+import '../App.css';
 
 const Header =() => {
     return (

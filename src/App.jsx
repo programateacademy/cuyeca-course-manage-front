@@ -5,8 +5,12 @@ import Cards from "./components/cards"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import Header from "./components/header";
 import Login from "./components/Login";
+
+import Modulet from "./components/Modulet"
+
 import SuperAdmin from "./components/SuperAdmin";
 import Lesson from "./components/lesson"
+
 
 
 
@@ -46,6 +50,7 @@ const App = () => {
           <Route path='/lesson' element={<Lesson/>}> </Route>
         </Routes>
 
+        <Modulet/>
         <Footer/>
       </Router>
 
