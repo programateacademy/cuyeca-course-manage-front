@@ -1,0 +1,21 @@
+.btnmodule {
+  border: none;
+  border-radius: 10px;
+  padding: 4px;
+  text-align: center;
+  font-size: 15px;
+  background-color: white;
+  color: #ea7c5a !important;
+  transition-duration: 0.4s;
+  border: 2px solid #ea7c5a;
+}
+
+.btnmodule:hover {
+  /* transition: transform 0.2s;
+    transform: translateY(8%); */
+  cursor: pointer;
+  background-color: #ea7c5a;
+  color: white !important;
+}
+
+

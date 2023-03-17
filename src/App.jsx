@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import Header from "./components/header";
 import Register from "./components/Register";
 import Login from "./components/Login";
-
+import Modulet from "./components/Modulet"
 
 
 const App = () => {
@@ -45,6 +45,7 @@ const App = () => {
           <Route path='/foro' element={""}>  </Route>
         </Routes>
 
+        <Modulet/>
         <Footer/>
       </Router>
 
