@@ -3,13 +3,41 @@ import {SuperAdminContext} from "../context/SuperAdminContext";
 import Logoc from "../assets/Logoc.svg";
 import ".././assets/styles/Login.css";
 
+
+
+
 const Login =() => {
     const[username,setUsername] = useState("");
     const[email,setEmail] = useState("");
     const[password,setPassword] = useState("");
+    const [errorMessage,setErrorMessage]=useState("");
     const[, setToken] = useContext(SuperAdminContext);
 
+    const submitLogin = async () => {
+        
+        const requestOptions = {
+            method: "POST",
+            headers:{"Content-Type": "application/x-www-form-urlencoded"},
+            body:JSON.stringify(`grant_type=&username=${email}&password=${password}&scope=&client_id=&client_secret=`),
+        };
+
+        const response = await fetch("/api/token", requestOptions);
+            const data=  await response.json();
+            if (!response.ok){
+                setErrorMessage(data.detail);
+            }   else { 
+                setToken(data.access_token);
+            }
+        
+    };
+
+        const handleSubmit = (e) => {
+            e.preventDefault();
+            submitLogin();
+        };
+
     return (
+       
         <div className="wrapper">
             <div className="container main">
                 <div className="row" id="container-row">
@@ -20,8 +48,9 @@ const Login =() => {
                         </div>
                     </div>
                 </div>
-                <div className="col-md-6 right">
-                    <div className="input-box">
+
+                <div className="col-md-6 right" >
+                    <form className="input-box" onSubmit={handleSubmit}>
                         <header>
                             Iniciar Sesion
                         </header>
@@ -44,11 +73,13 @@ const Login =() => {
                             <label for="email">Contraseña</label>
                         </div>
 
-                        <div class="input-field">
-                            <input type="submit" className="submit" value="Ingresar"/>
+                        <div class="input-field" >
+                            <button className="submit" type="submit" >
+                                Ingresar
+                            </button>
                         </div>
                         
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
