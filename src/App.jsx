@@ -38,7 +38,6 @@ const App = () => {
 
       <Router>
         <Header/>
-        {message}
         <Routes>
           <Route path='/' element={<Cards/>}>  </Route>
           <Route path='/admin' element={<Login/>}>  </Route>
