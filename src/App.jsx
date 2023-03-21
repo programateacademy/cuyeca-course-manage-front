@@ -43,7 +43,6 @@ const App = () => {
 
       <Router>
         <Header/>
-
         <Routes>
           <Route path='/' element={<Cards/>}>  </Route>
           <Route path='/admin' element={<SuperAdmin/>}>  </Route>
