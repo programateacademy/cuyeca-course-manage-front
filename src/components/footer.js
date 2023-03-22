@@ -22,14 +22,14 @@ const Footer =()=>{
                         </ul>
                         <ul className='col-12 col-md-3 list-unstyled'>
                             <li className='orange-text font-weight-bold mb-4 text-center'>Contactos</li>
-                            <li className='text-center'> olbellop@pedagogica.edu.co <br></br>+57 (601) 7769044</li>
+                            <li className='text-center'> cuyeka@gmail.com <br></br>+57 (314) 2302744</li>
 
                         </ul>
                         <ul className='col-12 col-md-3 list-unstyled'>
                             <li className='orange-text font-weight-bold mb-4 text-center'>Redes Sociales</li>
                             <li className='d-flex justify-content-center'>
-                            <i className="bi bi-facebook p-2"></i>
-                            <i className="bi bi-twitter p-2"></i>
+                            <a href="https://www.facebook.com/cuyeca"><i class="bi bi-facebook p-2"></i></a>
+                            <a href="https://twitter.com/cuyeca?s=20"><i class="bi bi-twitter p-2"></i></a>
                             </li>
 
                         </ul>
