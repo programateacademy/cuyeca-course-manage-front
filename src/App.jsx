@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Footer from "./components/footer";
-// import Card from "./components/card";
 import Cards from "./components/cards"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import Header from "./components/header";
@@ -11,7 +10,7 @@ import Modulet from "./components/Modulet"
 import SuperAdmin from "./components/SuperAdmin";
 import Lesson from "./components/lesson"
 import "./App.css"
-import Table from "./components/Table";
+
 
 
 
@@ -52,7 +51,7 @@ const App = () => {
           <Route path='/lesson' element={<Lesson/>}> </Route>
         </Routes>
 
-        {/* <Modulet/> */}
+        <Modulet/>
         <Footer/>
       </Router>
 
