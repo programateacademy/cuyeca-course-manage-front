@@ -1,3 +1,11 @@
+.app-container{
+  height: 100vh;
+}
+
+.navbar {
+  margin-bottom: 50px;
+}
+
 .btnheader .nav-link {
   border: none;
   border-radius: 10px;

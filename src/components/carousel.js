@@ -1,13 +1,15 @@
 import React from 'react'
+import { Link } from "react-router-dom";
+import '../assets/styles/carousel.css'
 
 import banner1 from '../assets/banner1.png'
 import banner2 from '../assets/banner2.png'
 import banner3 from '../assets/banner3.png'
 import banner4 from '../assets/banner4.png'
 
-function Carousel() {
+const carousel = () => {
   return (
-    <div>
+    <div className='carousel-container'>
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div className="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -26,7 +28,7 @@ function Carousel() {
                     <img src={banner3} className="d-block w-100 m-0" alt="..."/>
                 </div>
                 <div className="carousel-item">
-                    <img src={banner4} className="d-block w-100 m-0" alt="..."/>
+                    <Link to="/home-lessons"><img src={banner4} className="d-block w-100 m-0" alt="..." /></Link>
                 </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -43,4 +45,4 @@ function Carousel() {
   )
 }
 
-export default Carousel
+export default carousel;
