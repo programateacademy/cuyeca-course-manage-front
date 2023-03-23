@@ -6,6 +6,7 @@ import banner1 from '../assets/banner1.png'
 import banner2 from '../assets/banner2.png'
 import banner3 from '../assets/banner3.png'
 import banner4 from '../assets/banner4.png'
+import banner5 from '../assets/banner5.png'
 
 const carousel = () => {
   return (
@@ -28,7 +29,10 @@ const carousel = () => {
                     <img src={banner3} className="d-block w-100 m-0" alt="..."/>
                 </div>
                 <div className="carousel-item">
-                    <Link to="/home-lessons"><img src={banner4} className="d-block w-100 m-0" alt="..." /></Link>
+                    <img src={banner4} className="d-block w-100 m-0" alt="..."/>
+                </div>
+                <div className="carousel-item">
+                    <Link to="/home-lessons"><img src={banner5} className="d-block w-100 m-0" alt="..." /></Link>
                 </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
