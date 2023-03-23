@@ -95,7 +95,7 @@ const CoursesModal = ({active, handleModal,id,setErrorMessage}) => {
         <section className="form-main"> 
         <div className="form-content">           
             <div className="box">
-                <h3 >Formulario</h3>
+                <h3> Formulario </h3>
                 <form action="">
                     <div className="mb-3">
                         <input type="text" placeholder="Ingrese el nombre" 
