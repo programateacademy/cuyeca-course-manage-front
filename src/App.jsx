@@ -11,6 +11,7 @@ import Modulet from "./components/Modulet"
 
 import SuperAdmin from "./components/SuperAdmin";
 import Lesson from "./components/lesson"
+import Table from "./components/Table";
 
 
 
@@ -48,11 +49,11 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Cards/>}>  </Route>
           <Route path='/admin' element={<SuperAdmin/>}>  </Route>
-          <Route path='/foro' element={""}>  </Route>
+          <Route path='/foro' element={""}> </Route>
           <Route path='/lesson' element={<Lesson/>}> </Route>
         </Routes>
 
-        <Modulet/>
+         {/* <Modulet/>  */}
         <Footer/>
       </Router>
 
