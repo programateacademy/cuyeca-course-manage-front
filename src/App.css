@@ -25,3 +25,8 @@
   background-color: #ea7c5a;
   color: white !important;
 }
+
+.navbar img{
+  width: 35%;
+  height:35%;
+}
