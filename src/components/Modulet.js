@@ -1,24 +1,9 @@
-import React, {useEffect} from "react";
+import React from "react";
 import ".././assets/styles/Modulet.css";
-import axios from 'axios'
 
 
 function Modulet() {
-    // useEffect(() => {   
-    //     fetchData()
-    // }, [])
-    // async function fetchData() {
-    //     try {
-    //       const response = await axios.get('http://127.0.0.1:8000/courses');
-    //       console.log(response.data);
-    //     } catch (error) {
-    //       console.error(error);
-    //     }
-    //   }
-    // const loadData = async () =>{
-    //     const answerm = await axios.get('http://127.0.0.1:8000/courses');
-    //     console.log(answerm.data);
-    // }
+    
     return(
         <div className="container mb-3">
             <br></br>
