@@ -5,6 +5,7 @@ import Cards from "./components/cards"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import Header from "./components/header";
 import Login from "./components/Login";
+import Carousel from "./components/carousel"
 
 import Modulet from "./components/Modulet"
 
@@ -43,6 +44,7 @@ const App = () => {
 
       <Router>
         <Header/> 
+        <Carousel/>
         <Routes>
           <Route path='/' element={<Cards/>}>  </Route>
           <Route path='/admin' element={<SuperAdmin/>}>  </Route>
