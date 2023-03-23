@@ -18,9 +18,10 @@ function lesson() {
           </div>
           <div className="lesson-resources d-flex">
             <h5 className="resources">Recursos</h5>
-            <button type="button" class="btn btn-outline-primary"><i class="bi bi-filetype-pdf p-3"></i></button>
-            <button type="button" class="btn btn-outline-danger"><i class="bi bi-youtube p-3"></i></button>
-            <button type="button" class="btn btn-outline-success"><i class="bi bi-link-45deg p-3"></i></button>
+            <button type="button" className="btn btn-outline-primary"><i class="bi bi-filetype-pdf p-3"></i></button>
+            <button type="button" className="btn btn-outline-danger"><i class="bi bi-youtube p-3"></i></button>
+            <button type="button" className="btn btn-outline-success"><i class="bi bi-link-45deg p-3"></i></button>
+            <button type="button" className="btn btn-outline-info">Siguiente Lección  <i class="bi bi-caret-right-fill"></i></button>
           </div>
         </div>  
     </div>
