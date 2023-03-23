@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import Login from "../components/Login"
 import Board from "../components/Board"
 import { SuperAdminContext } from "../context/SuperAdminContext";
+import Table from "./Table";
 
 
 const Page = () => {
@@ -40,7 +41,7 @@ const Page = () => {
                             </div>
 
                         ):(
-                            <p> table</p>
+                           <Table/>
                         )}
             </div>
         </div>

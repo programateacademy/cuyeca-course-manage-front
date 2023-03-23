@@ -1,3 +1,10 @@
+.footer-container{
+    margin-top: 50px;
+    position:relative;
+    left:0;
+    bottom:0;
+    right:0;
+}
 .orange-text{
     color: #F73F1D;
 }

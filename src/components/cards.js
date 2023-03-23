@@ -8,20 +8,20 @@ import img3 from '../assets/img3.png'
 const cards = [
     {
         id: 1,
-        title: "Leccion 1",
+        title: "Lección 1",
         image: img1,
         text: 'Esta es la primera lección, trata de:',
         url: 'http://localhost:3000/lesson'
     },
     {
         id: 2,
-        title: "Leccion 2",
+        title: "Lección 2",
         image: img2,
         url: 'http://localhost:3000/lesson'
     },
     {
         id: 3,
-        title: "Leccion 3",
+        title: "Lección 3",
         image: img3,
         url: 'http://localhost:3000/lesson'
     }
