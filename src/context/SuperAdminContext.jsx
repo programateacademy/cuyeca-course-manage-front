@@ -11,7 +11,7 @@ export const SuperAdminProvider = (props) => {
                 method: "GET",
                 headers:{
                     "Content-Type": "application/json",
-                    Authorization: "Bearer" + " " + token,
+                    Authorization: "Bearer " + token,
                 },
             };
             const response = await fetch("/api/superadmin/me", requestOptions);
@@ -20,7 +20,7 @@ export const SuperAdminProvider = (props) => {
             }
             localStorage.setItem("awesome token", token);
         };
-        fetchSuperAdmin();
+        fetchSuperAdmin()
     }, [token]);
     return (
         <SuperAdminContext.Provider value={[token,setToken]}>
