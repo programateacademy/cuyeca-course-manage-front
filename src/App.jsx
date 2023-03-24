@@ -10,7 +10,7 @@ import Modulet from "./components/Modulet"
 import SuperAdmin from "./components/SuperAdmin";
 import Lesson from "./components/lesson"
 import "./App.css"
-
+import Createlesson from "./components/Createlesson";
 
 
 
@@ -51,7 +51,8 @@ const App = () => {
           <Route path='/lesson' element={<Lesson/>}> </Route>
         </Routes>
 
-        <Modulet/>
+        {/* <Modulet/> */}
+        <Createlesson/>
         <Footer/>
       </Router>
 
