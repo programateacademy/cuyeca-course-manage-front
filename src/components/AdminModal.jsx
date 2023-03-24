@@ -1,4 +1,5 @@
 import React, { useState,useEffect } from "react";
+import ".././assets/styles/Modulet.css";
 
 const AdminModal = ({active, handleModal,token,id,setErrorMessage}) => {
     const[username,setUserName]= useState("");
