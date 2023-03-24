@@ -51,7 +51,7 @@ const App = () => {
           <Route path='/lesson' element={<Lesson/>}> </Route>
         </Routes>
 
-        <Modulet/>
+        {/* <Modulet/> */}
         <Footer/>
       </Router>
 

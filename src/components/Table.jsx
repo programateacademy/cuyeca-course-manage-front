@@ -3,6 +3,9 @@ import moment from "moment";
 import ErrorMessage from "./ErrorMessage";
 import {SuperAdminContext} from "../context/SuperAdminContext";
 import AdminModal from "./AdminModal";
+import ".././assets/styles/Modulet.css";
+
+
 
 const Table = () => {
     const [token] = useContext(SuperAdminContext);
@@ -96,7 +99,7 @@ const Table = () => {
     </table>
 
        ): <p>Cargando</p> }
-    <button className='btnmodule' onClick={ () => setActiveModal(true)} >Crear Administrador</button>
+    
        
         </>
    );
