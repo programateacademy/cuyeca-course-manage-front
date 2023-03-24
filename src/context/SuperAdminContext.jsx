@@ -20,7 +20,7 @@ export const SuperAdminProvider = (props) => {
             }
             localStorage.setItem("awesome token", token);
         };
-        fetchSuperAdmin();
+        fetchSuperAdmin()
     }, [token]);
     return (
         <SuperAdminContext.Provider value={[token,setToken]}>
