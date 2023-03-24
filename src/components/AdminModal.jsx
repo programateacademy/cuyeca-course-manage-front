@@ -87,17 +87,17 @@ const AdminModal = ({active, handleModal,token,id,setErrorMessage}) => {
         <section className="form-main"> 
         <div className="form-content">           
             <div className="box">
-                <h3 >Formulario</h3>
+                <h3 >Creación de administradores</h3>
                 <form action="">
                     <div className="mb-3">
-                        <input type="text" placeholder="Ingrese el nombre del administrador" 
+                        <input type="text" placeholder="Ingrese el nombre" 
                         value={username} 
                         onChange={(e) => setUserName(e.target.value)}
                         className="form-control"
                         required />
                     </div>
                     <div className="mb-3">
-                        <input type="text" placeholder="Ingrese la contraseña del administrador" 
+                        <input type="text" placeholder="Ingrese la contraseña" 
                         value={password} 
                         onChange={(e) => setPassword(e.target.value)}
                         className="form-control"

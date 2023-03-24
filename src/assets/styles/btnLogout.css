@@ -1,0 +1,20 @@
+.btnLogout{
+    border: none;
+    border-radius: 10px;
+    padding: 5px 19px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: white;
+    color: #ea7c5a !important;
+    transition-duration: 0.4s;
+    border: 2px solid #ea7c5a;
+} 
+
+.btnLogout:hover {
+    transition: transform 0.2s;
+    transform: translateY(8%); 
+    cursor: pointer;
+    background-color: #ea7c5a;
+    color: white !important;
+  }
