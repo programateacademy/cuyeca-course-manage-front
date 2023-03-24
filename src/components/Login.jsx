@@ -46,14 +46,13 @@ const Login =(props) => {
         };
 
     return (
-       
         <div className="wrapper">
             <div className="container main">
                 <div className="row" id="container-row">
                     <div className="col-md-6 side-image">
                         <img src={Logoc} className="imageLogo" alt="Logo" />
                         <div className="text">
-                            <p>Por los derechos de los niños y las niñas</p>
+                            <p>Por los derechos de los niños y las niñas.</p>
                         </div>
                     </div>
                 </div>
@@ -70,11 +69,11 @@ const Login =(props) => {
                                     className="input"
                                     required
                                     />
-                            <label for="text">Correo Electronico</label>
+                            <label for="text">Correo Electrónico o Usuario</label>
                         </div>
                         <div class ="input-field">
-                            <input type="password" 
-                            value={password} 
+                            <input type="password"
+                            value={password}
                                     onChange={(e) => setPassword(e.target.value)}
                                     className="input"
                                     required
