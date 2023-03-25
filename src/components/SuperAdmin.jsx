@@ -3,11 +3,13 @@ import Login from "../components/Login"
 import Board from "../components/Board"
 import { SuperAdminContext } from "../context/SuperAdminContext";
 import Table from "./Table";
+import Modulet from "./Modulet";
 
 
 const Page = () => {
     const [message, setMessage] = useState("");
     const [token] = useContext(SuperAdminContext);
+    const[ userType, setUserType] = useState("");
 
     const getWelcomeMessage = async () => {
         const requestOptions = {
@@ -30,6 +32,10 @@ const Page = () => {
         getWelcomeMessage();
     }, []);
 
+    const handleLoginData = (loginData) => {
+        setUserType(loginData)
+    }
+
     return (
         <div>
             <Board title={message}/>
@@ -37,11 +43,11 @@ const Page = () => {
                     {
                         !token ? (
                             <div className="columns">
-                                <Login/>
+                                <Login onUserType={handleLoginData}/>
                             </div>
 
                         ):(
-                           <Table/>
+                           userType === "superAdmin" ? <Table/>: <Modulet/>
                         )}
             </div>
         </div>

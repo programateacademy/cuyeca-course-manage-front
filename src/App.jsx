@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import Header from "./components/header";
 // import Login from "./components/Login";
 import Carousel from "./components/carousel"
-import Modulet from "./components/Modulet"
+// import Modulet from "./components/Modulet"
 
 import SuperAdmin from "./components/SuperAdmin";
 import Lesson from "./components/lesson"
@@ -52,7 +52,9 @@ const App = () => {
         </Routes>
 
         {/* <Modulet/> */}
+
         <Createlesson/>
+
         <Footer/>
       </Router>
 

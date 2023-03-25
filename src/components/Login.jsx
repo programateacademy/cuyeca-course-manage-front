@@ -6,7 +6,7 @@ import ".././assets/styles/Login.css";
 
 
 
-const Login =() => {
+const Login =(props) => {
     const[username,setUsername] = useState("");
     const[email,setEmail] = useState("");
     const[password,setPassword] = useState("");
@@ -20,12 +20,21 @@ const Login =() => {
             headers:{"Content-Type": "application/x-www-form-urlencoded"},
             body:JSON.stringify(`grant_type=&username=${email}&password=${password}&scope=&client_id=&client_secret=`),
         };
+            // the lines below fetch the data from different endpoints depending if the user is a superadmin that uses an email to login or an admin that uses an username to login //
+            let response = null
+                if (email.includes("@")){
+                    response = await fetch("/api/token", requestOptions)
+                    props.onUserType("superAdmin")
+                } 
+                if (!email.includes("@")){
+                    response = await fetch("/api/token-admin", requestOptions)
+                    props.onUserType("admin")
+                } 
 
-        const response = await fetch("/api/token", requestOptions);
             const data=  await response.json();
             if (!response.ok){
                 setErrorMessage(data.detail);
-            }   else { 
+            } else {
                 setToken(data.access_token);
             }
         
@@ -37,14 +46,13 @@ const Login =() => {
         };
 
     return (
-       
         <div className="wrapper">
             <div className="container main">
                 <div className="row" id="container-row">
                     <div className="col-md-6 side-image">
                         <img src={Logoc} className="imageLogo" alt="Logo" />
                         <div className="text">
-                            <p>Por los derechos de los niños y las niñas</p>
+                            <p>Por los derechos de los niños y las niñas.</p>
                         </div>
                     </div>
                 </div>
@@ -55,17 +63,17 @@ const Login =() => {
                             Iniciar Sesion
                         </header>
                         <div class ="input-field">
-                            <input type="email"
+                            <input type="text"
                             value={email} 
                                     onChange={(e) => setEmail(e.target.value)}
                                     className="input"
                                     required
                                     />
-                            <label for="email">Correo Electronico</label>
+                            <label for="text">Correo Electrónico o Usuario</label>
                         </div>
                         <div class ="input-field">
-                            <input type="password" 
-                            value={password} 
+                            <input type="password"
+                            value={password}
                                     onChange={(e) => setPassword(e.target.value)}
                                     className="input"
                                     required
@@ -78,7 +86,7 @@ const Login =() => {
                                 Ingresar
                             </button>
                         </div>
-                        
+
                     </form>
                 </div>
             </div>

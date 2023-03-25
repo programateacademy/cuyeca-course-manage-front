@@ -1,6 +1,9 @@
 .carousel-container{
     margin-bottom: 40px;
+    height: 65%;
+    width: 65%;
 }
+
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
