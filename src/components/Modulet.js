@@ -69,7 +69,7 @@ const Modulet = () => {
        
         <div className="container mb-3">
             <br></br>
-            <h1 className="text-center mb-3"> Modulo </h1>
+            <h1 className="text-center mb-3"> Cursos</h1>
             <div className="rows">
                 <div className="">
                     <h2 className="text-center mb-3">Lista de Cursos</h2>

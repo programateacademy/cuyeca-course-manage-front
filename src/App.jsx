@@ -53,7 +53,7 @@ const App = () => {
 
         {/* <Modulet/> */}
 
-        <Createlesson/>
+        {/* <Createlesson/> */}
 
         <Footer/>
       </Router>
