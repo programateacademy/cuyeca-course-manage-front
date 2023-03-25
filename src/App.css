@@ -1,9 +1,15 @@
 .app-container{
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
-
+.header-wrapper{
+  width:100vw ;
+}
 .navbar {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .btnheader .nav-link {
@@ -27,6 +33,6 @@
 }
 
 .navbar img{
-  width: 35%;
-  height:35%;
+  width: 30%;
+  height:30%;
 }
