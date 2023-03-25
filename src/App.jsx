@@ -10,7 +10,7 @@ import Carousel from "./components/carousel"
 import SuperAdmin from "./components/SuperAdmin";
 import Lesson from "./components/lesson"
 import "./App.css"
-
+import Createlesson from "./components/Createlesson";
 
 
 
@@ -52,6 +52,9 @@ const App = () => {
         </Routes>
 
         {/* <Modulet/> */}
+
+        <Createlesson/>
+
         <Footer/>
       </Router>
 
