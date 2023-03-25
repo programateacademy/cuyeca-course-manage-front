@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Card from "./card";
 
 import img1 from '../assets/img1.png'
 import img2 from '../assets/img2.png'
 import img3 from '../assets/img3.png'
+import card from './card';
 
 const cards = [
     {
@@ -27,15 +28,44 @@ const cards = [
     }
 ]
 
-function Cards() {
+const Cards= () => {
+    const [lessons, setLessons] = useState([]);
+    const getAllLessons = async () => {
+        const requestOptions = {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        };
+
+        const response = await fetch("/lessons", requestOptions);
+        const fetchedLessons = await response.json();
+
+        setLessons(fetchedLessons);
+
+        if (!response.ok) {
+            console.log("ocurrió un error al traer las lecciones")
+        } else {
+            console.log("las lecciones fueron traidas con exito",fetchedLessons)
+        }
+
+    };
+
+    useEffect(() => {
+        getAllLessons();
+
+    }, []);
 
     return (
+        
     <div className="container d-flex justify-content-center align-items-center h-100">
+        
         <div className="row">
+        <h1 className='title'>Diplomado en seguridad social</h1>
             {
-                cards.map(card => (
-                    <div className="col-md-4" key={card.id}>
-                        <Card title={card.title} imageSource={card.image} url={card.url} text={card.text}/>
+                lessons.map( lesson => (
+                    <div className="col-md-4" key={ lesson.id}>
+                        < Card title={ lesson.name} imageSource={img3} url={ 'http://localhost:3000/lesson/'} text={lesson.description}/>
                     </div>
                 ))
             }
