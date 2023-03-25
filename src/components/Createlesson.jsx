@@ -80,7 +80,7 @@ const Createlesson = () => {
                                 <tr>
                                     <th>Nombre</th>
                                     <th>Descripción</th>
-                                    <th>Recurso</th>
+                                    <th>Id</th>
                                     <th>Acciones</th>
                                 </tr>
                             </thead>
@@ -89,7 +89,7 @@ const Createlesson = () => {
                                 <tr key={lesson.id}>
                                     <td> {lesson.name} </td>  
                                     <td> {lesson.description}</td>
-                                    <td>{lesson.title_resource}</td>
+                                    <td>{lesson.id}</td>
                                     <td><bttn className='btn btn-warning btn-sm' onClick={ () => handleUpdate(lesson.id)} >Modificar</bttn> </td>
                                     <td><bttn className='btn btn-danger btn-sm'onClick={ () => handleDelete(lesson.id)} >Eliminar</bttn>   </td>
                                 </tr>

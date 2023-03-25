@@ -5,7 +5,7 @@ import ".././assets/styles/Modulet.css";
 const LessonModal = ({active, handleModal,id,setErrorMessage}) => {
     const[name,setName]= useState("");
     const[description,setDescription]= useState("");
-    const[title_resource,setTitle_resource]= useState("");
+    const[iid,setIid]= useState("");
 
     useEffect(() => {
         const getLesson = async () => {
@@ -25,7 +25,7 @@ const LessonModal = ({active, handleModal,id,setErrorMessage}) => {
             const data = await response.json();
             setName(data.name);
             setDescription(data.description);
-            setTitle_resource(data.title_resource);
+            setIid(data.iid);
             
         }
     };
@@ -39,7 +39,7 @@ const LessonModal = ({active, handleModal,id,setErrorMessage}) => {
     const cleanFormData = () => {
         setName("");
         setDescription("");
-        setTitle_resource("");
+        setIid("");
 
     };
 
@@ -54,7 +54,7 @@ const LessonModal = ({active, handleModal,id,setErrorMessage}) => {
                 
             },
 
-            body: JSON.stringify({name:name, description: description,title_resource:title_resource  }),
+            body: JSON.stringify({name:name, description: description, id:iid  }),
         };
         const response = await fetch("/lesson", requestOptions);
         if (!response.ok){
@@ -72,7 +72,7 @@ const LessonModal = ({active, handleModal,id,setErrorMessage}) => {
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({name:name, description: description,title_resource:title_resource }),
+            body: JSON.stringify({name:name, description: description, id: iid}),
 
         };
 
@@ -93,23 +93,23 @@ const LessonModal = ({active, handleModal,id,setErrorMessage}) => {
                 <h3> Creacion de lecciones </h3>
                 <form action="">
                     <div className="mb-3">
-                        <input type="text" placeholder="Ingrese el nombre" 
+                        <input type="text" placeholder="Ingrese el nombre de la lección" 
                         value={name} 
                         onChange={(e) => setName(e.target.value)}
                         className="form-control"
                         required />
                     </div>
                     <div className="mb-3">
-                        <input type="text" placeholder="Ingrese la descripción" 
+                        <input type="text" placeholder="Ingrese la descripción de la lección" 
                         value={description} 
                         onChange={(e) => setDescription(e.target.value)}
                         className="form-control"
                         required />
                     </div>
                     <div className="mb-3">
-                        <input type="text" placeholder="Ingrese los recursos" 
-                        value={title_resource} 
-                        onChange={(e) => setTitle_resource(e.target.value)}
+                        <input type="text" placeholder="Ingrese el número de la lección" 
+                        value={iid} 
+                        onChange={(e) => setIid(e.target.value)}
                         className="form-control"
                         required />
                     </div>
