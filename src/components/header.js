@@ -5,7 +5,7 @@ import '../App.css';
 
 const Header =() => {
     return (
-        <div>   
+        <div className="header-wrapper">   
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid">
                     <Link className="navbar-brand"  to='/'>
