@@ -1,7 +1,7 @@
 import React from 'react'
 
 import img1 from '../assets/img1.png'
-import './lesson.css'
+import '../assets/styles/lesson.css'
 
 function lesson() {
   return (

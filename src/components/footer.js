@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 import slogo from '../assets/slogo.svg'
 
-import './footer.css'
+import '../assets/styles/footer.css'
 
 const Footer =()=>{
 
