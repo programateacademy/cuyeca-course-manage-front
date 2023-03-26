@@ -15,6 +15,7 @@ const Board = ({title}) => {
         <div className="container">
             <h1 className="title">Acceso Administradores</h1>
             {token && (<button className='btnLogout'onClick={handleLogout}>Cerrar Sesión</button>) }
+            
 
         </div>
         

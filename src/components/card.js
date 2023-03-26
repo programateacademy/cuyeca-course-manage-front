@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import './cards.css'
+import '../assets/styles/cards.css'
 
 function card({title, imageSource, text, url}) {
   

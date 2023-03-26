@@ -90,7 +90,7 @@ const LessonModal = ({active, handleModal,id,setErrorMessage}) => {
         <section className="form-main"> 
         <div className="form-content">           
             <div className="box">
-                <h3> Creacion de lecciones </h3>
+                <h3> Creación de lecciones </h3>
                 <form action="">
                     <div className="mb-3">
                         <input type="text" placeholder="Ingrese el nombre de la lección" 

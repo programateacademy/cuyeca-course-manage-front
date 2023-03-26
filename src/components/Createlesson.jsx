@@ -69,10 +69,10 @@ const Createlesson = () => {
        
         <div className="container mb-3">
             <br></br>
-            <h1 className="text-center mb-3"> Modulo </h1>
+            <h1 className="text-center mb-3"> Lecciones </h1>
             <div className="rows">
                 <div className="">
-                    <h2 className="text-center mb-3">Lista de Cursos</h2>
+                    <h2 className="text-center mb-3">Lista de Lecciones</h2>
                     <div className="table-responsive">
                       {loaded && lessons ?(
                         <table className="table table-ligth">
