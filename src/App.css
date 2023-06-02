@@ -1,1 +1,38 @@
+.app-container{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.header-wrapper{
+  width:100vw ;
+}
+.navbar {
+  margin-bottom: 20px;
+}
 
+.btnheader .nav-link {
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: white;
+  color: #ea7c5a !important;
+  transition-duration: 0.4s;
+  border: 2px solid #ea7c5a;
+}
+
+.btnheader:hover .nav-link {
+  transition: transform 0.2s;
+  transform: translateY(10%);
+  cursor: pointer;
+  background-color: #ea7c5a;
+  color: white !important;
+}
+
+.navbar img{
+  width: 30%;
+  height:30%;
+}
