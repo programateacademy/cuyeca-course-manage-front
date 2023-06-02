@@ -5,7 +5,10 @@ import ".././assets/styles/Modulet.css";
 const LessonModal = ({active, handleModal,id,setErrorMessage}) => {
     const[name,setName]= useState("");
     const[description,setDescription]= useState("");
-    const[iid,setIid]= useState("");
+    const[video,setVideo] = useState("");
+    const[resources,setResources] = useState("");
+   
+
 
     useEffect(() => {
         const getLesson = async () => {
@@ -20,12 +23,14 @@ const LessonModal = ({active, handleModal,id,setErrorMessage}) => {
         const response = await fetch(`/lesson/${id}`, requestOptions);
 
         if (!response.ok){
-            setErrorMessage("No se pudo encontrar el Curso")
+            setErrorMessage("No se pudo encontrar la lección")
         }else {
             const data = await response.json();
             setName(data.name);
             setDescription(data.description);
-            setIid(data.iid);
+            setVideo(data.video);
+            setResources(data.resources);
+            
             
         }
     };
@@ -39,7 +44,8 @@ const LessonModal = ({active, handleModal,id,setErrorMessage}) => {
     const cleanFormData = () => {
         setName("");
         setDescription("");
-        setIid("");
+        setVideo("");
+        setResources("");
 
     };
 
@@ -54,7 +60,7 @@ const LessonModal = ({active, handleModal,id,setErrorMessage}) => {
                 
             },
 
-            body: JSON.stringify({name:name, description: description, id:iid  }),
+            body: JSON.stringify({name:name, description:description, video:video, resources:resources}),
         };
         const response = await fetch("/lesson", requestOptions);
         if (!response.ok){
@@ -72,7 +78,7 @@ const LessonModal = ({active, handleModal,id,setErrorMessage}) => {
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({name:name, description: description, id: iid}),
+            body: JSON.stringify({name:name, description: description, video: video, resources: resources}),
 
         };
 
@@ -107,12 +113,20 @@ const LessonModal = ({active, handleModal,id,setErrorMessage}) => {
                         required />
                     </div>
                     <div className="mb-3">
-                        <input type="text" placeholder="Ingrese el número de la lección" 
-                        value={iid} 
-                        onChange={(e) => setIid(e.target.value)}
+                        <input type="text" placeholder="Ingrese el link del video" 
+                        value={video} 
+                        onChange={(e) => setVideo(e.target.value)}
                         className="form-control"
                         required />
                     </div>
+                    <div className="mb-3">
+                        <input type="text" placeholder="Ingrese el link de drive de los archivos" 
+                        value={resources} 
+                        onChange={(e) => setResources(e.target.value)}
+                        className="form-control"
+                        required />
+                    </div>
+                   
                   
 
                     <div className="mb-3 d-flex justify-content-center align-items-center">

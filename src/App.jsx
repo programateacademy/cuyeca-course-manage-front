@@ -48,7 +48,6 @@ const App = () => {
           <Route path='/home-lessons' element={<Cards/>}>  </Route>
           <Route path='/admin' element={<SuperAdmin/>}>  </Route>
           <Route path='/foro' element={""}>  </Route>
-          <Route path='/lesson' element={<Lesson/>}> </Route>
           <Route path='/createlesson' element={<Createlesson/>}> </Route>
         </Routes>
 

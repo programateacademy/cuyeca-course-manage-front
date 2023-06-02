@@ -1,19 +1,19 @@
 import React from 'react'
-
+import PropTypes from 'prop-types'
 import img1 from '../assets/img1.png'
 import '../assets/styles/lesson.css'
 
-function lesson() {
+function lesson({name,description,video,resources}) {
   return (
     <div className="lesson">
         <div className="lesson-body">
           <h3 className="title-course d-flex justify-content-center font-weight-bold">Diplomado en Seguridad social</h3>
           <div className="lesson-name d-flex align-items-center">
             <img src={img1} alt='imagen_leccion1'/>
-            <h4 className='font-weight-bold'>Comprensión de la realidad social</h4>
+            <h4 className='font-weight-bold'>{name}</h4>
           </div>
           <div className="lesson-description d-flex">
-            <h5 className="description"> Esta lección busca ayudar a comprender las complejidades y desafíos de la realidad social en la que se desenvuelven las personas y comunidades.</h5>
+            <h5 className="description"> {description}</h5>
             <p>.</p>
           </div>
           <div className="lesson-resources d-flex">
@@ -26,6 +26,13 @@ function lesson() {
         </div>  
     </div>
   )
+}
+
+lesson.propTypes = {
+  title: PropTypes.string.isRequired,
+  url: PropTypes.string,
+  imageSource: PropTypes.string,
+  text: PropTypes.string
 }
 
 export default lesson

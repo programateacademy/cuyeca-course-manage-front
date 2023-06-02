@@ -1,12 +1,13 @@
 import React, {useState, useEffect} from "react";
 import ".././assets/styles/Modulet.css";
 import ErrorMessage from "./ErrorMessage";
-import LessonModal from "./LessonModal"
+import LessonModal from "./LessonModal";
+import Board from "../components/Board"
 
 
 const Createlesson = () => {
     
-    const [lessons,setLessons] = useState(null);
+    const [lessons,setLesson] = useState(null);
     const [errorMessage,setErrorMessage] = useState("");
     const [loaded,setLoaded] = useState(false);
     const [activeModal, setActiveModal] = useState(false);
@@ -30,40 +31,41 @@ const Createlesson = () => {
                 setErrorMessage("Error al eliminar lección")
             }
 
-            getLessons(response);
+            getLesson(response);
     };
 
-    const getLessons = async () => {
+    const getLesson = async () => {
         const requestOptions = {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
             },
         };
-        const response = await fetch("/lesson",requestOptions);
+        const response = await fetch("/lessons",requestOptions);
         if (!response.ok){
             setErrorMessage("No se pudo cargar la lección");
         }else{
             const data = await response.json();
-            setLessons(data);
+            setLesson(data);
             setLoaded(true);
         }
     };
 
     useEffect(() => {
-        getLessons();
+        getLesson();
 
     }, []);
 
         const handleModal = () => {
             setActiveModal(!activeModal);
-            getLessons();
+            getLesson();
             setId(null);
 
         }
 
     return(
     <>
+    <Board title={"lo q sea"}/>
     <LessonModal active={activeModal} handleModal={handleModal} id={id} setErrorMessage={setErrorMessage} />
     <ErrorMessage message={errorMessage}/>
        
@@ -80,8 +82,8 @@ const Createlesson = () => {
                                 <tr>
                                     <th>Nombre</th>
                                     <th>Descripción</th>
-                                    <th>Id</th>
-                                    <th>Acciones</th>
+                                    <th>Video</th>
+                                    <th>Recursos</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -89,14 +91,15 @@ const Createlesson = () => {
                                 <tr key={lesson.id}>
                                     <td> {lesson.name} </td>  
                                     <td> {lesson.description}</td>
-                                    <td>{lesson.id}</td>
+                                    <td>{lesson.video}</td>
+                                    <td>{lesson.resources}</td>
                                     <td><bttn className='btn btn-warning btn-sm' onClick={ () => handleUpdate(lesson.id)} >Modificar</bttn> </td>
                                     <td><bttn className='btn btn-danger btn-sm'onClick={ () => handleDelete(lesson.id)} >Eliminar</bttn>   </td>
                                 </tr>
                                 ) )}
                             </tbody>
                         </table>
-                        ): <p>C</p> }
+                        ): <p>Cargando</p> }
                         
                     </div>
                 </div>
@@ -110,4 +113,4 @@ const Createlesson = () => {
 
 };
 
-export default Createlesson
+export default Createlesson;

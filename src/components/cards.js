@@ -65,7 +65,7 @@ const Cards= () => {
             {
                 lessons.map( lesson => (
                     <div className="col-md-4" key={ lesson.id}>
-                        < Card title={ lesson.name} imageSource={img3} url={ 'http://localhost:3000/lesson/'} text={lesson.description}/>
+                        < Card title={ lesson.name} imageSource={img3} url={ 'http://localhost:3000/lesson/'} text={lesson.description} video={lesson.video} resources={lesson.resources}/>
                     </div>
                 ))
             }
