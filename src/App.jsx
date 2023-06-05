@@ -47,7 +47,6 @@ const App = () => {
           <Route path='/' element={<Carousel/>}>  </Route>
           <Route path='/home-lessons' element={<Cards/>}>  </Route>
           <Route path='/admin' element={<SuperAdmin/>}>  </Route>
-          <Route path='/foro' element={""}>  </Route>
           <Route path='/createlesson' element={<Createlesson/>}> </Route>
         </Routes>
 
